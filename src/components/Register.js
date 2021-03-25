@@ -19,12 +19,18 @@ const Register = (props) => {
 
     const submit = (e)=>{
         e.preventDefault();
-        axios.post('https://605a159ab11aba001745d85c.mockapi.io/login',{
-            email: data.email,
-            userId: data.userId,
-            password: data.password
-        }).then(res=>console.log(res.data))
-        props.history.push('/dashboard')
+        if(data.email=== '' || data.userId ==='' || data.password===''){
+            setError('Input fields can not be empty')
+        }else{
+            setError(null)
+            axios.post('https://605a159ab11aba001745d85c.mockapi.io/login',{
+                email: data.email,
+                userId: data.userId,
+                password: data.password
+            }).then(res=>console.log(res.data))
+            .catch(error=>console.log(error));
+            props.history.push('/dashboard')
+        }
     }
 
   return (
@@ -50,7 +56,7 @@ const Register = (props) => {
           value={data.password}
           type='password'
           placeholder='Enter your password'
-          onChange={e=>handle(e)}/><br></br>
+          onChange={e=>handle(e)}/><br></br><br/>
           {error && <div className='error'>{error}</div>}
           <button>Register</button>
       </form>
