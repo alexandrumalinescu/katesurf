@@ -15,7 +15,7 @@ const Login = (props) => {
     setLoginData(newLoginData);
   };
 
-  //const postlogin =`https://605a159ab11aba001745d85c.mockapi.io/login?=&userId=${userId}&password=${password}`
+  //const postlogin =`https://605a159ab11aba001745d85c.mockapi.io/login?=&userId=${loginData.userId}&password=${loginData.password}`
 
   const handleLogin = (e) => {
     e.preventDefault(e);
@@ -37,12 +37,12 @@ const Login = (props) => {
   return (
     <div className="login">
       <form onSubmit={(e) => handleLogin(e)}>
-        <div>UserId</div>
+        <div>Username</div>
         <input
           id='userId'
           value={loginData.userId}
           type="text"
-          placeholder="Type your UserId"
+          placeholder="Type your username"
           onChange={(e) => handle(e)}
         />
         <div>Password</div>

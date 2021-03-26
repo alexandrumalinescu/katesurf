@@ -48,7 +48,7 @@ const Register = (props) => {
           id='userId'
           value={data.userId}
           type='text'
-          placeholder='Enter your UserId'
+          placeholder='Enter your username'
           onChange={e=>handle(e)} />
           <div>Password</div>
           <input
