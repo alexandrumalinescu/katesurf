@@ -19,7 +19,7 @@ const Register = (props) => {
 
     const submit = (e)=>{
         e.preventDefault();
-        if(data.email=== '' || data.userId ==='' || data.password===''){
+        if(data.email==='' || data.userId==='' || data.password===''){
             setError('Input fields can not be empty')
         }else{
             setError(null)
