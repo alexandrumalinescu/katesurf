@@ -1,8 +1,11 @@
 import React from 'react';
+import GoogleMaps from './GoogleMaps';
+
+
 
 const Dashboard = (props)=> {
 
-  
+    // API_KEY= AIzaSyA4WZVgyVFWRwW-JD1-qBojpP5sW9-5Rew
 
     const handleLogout = () => {
         props.history.push('/login')
@@ -10,8 +13,11 @@ const Dashboard = (props)=> {
 
     return (
         <div className='dashboard'>
-            Welcome User!
+            Welcome !
             <button onClick={handleLogout}>LogOut</button>
+            <div>
+                <GoogleMaps />
+            </div>
         </div>
     )
 }
