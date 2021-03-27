@@ -1,5 +1,7 @@
 .App {
+  margin: 0;
   text-align: center;
+  padding: 0;
 }
 
 .login {
@@ -17,7 +19,9 @@
 
 .header a {
   margin: 10px;
-
 }
+
+
+
 
 
