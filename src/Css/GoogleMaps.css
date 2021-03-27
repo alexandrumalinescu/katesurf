@@ -1,4 +1,9 @@
-
+.googlemaps {
+    position: relative;
+    max-width: 95vw;
+    height: 500px;
+    margin: 0 auto;
+    }
 
 .navdash button {
     background-color:  rgb(23, 214, 49);
