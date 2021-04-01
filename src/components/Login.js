@@ -21,6 +21,7 @@ const Login = (props) => {
     e.preventDefault(e);
     axios.get('https://605a159ab11aba001745d85c.mockapi.io/login',)
     .then(res=>{
+      
       const result = res.data
       const checkId=result.map((item)=>item.userId===loginData.userId);
       const verifyCheckId = checkId.every(i=>i===false);
@@ -49,7 +50,7 @@ const Login = (props) => {
         <input
           id='password'
           value={loginData.password}
-          typep="password"
+          type="password"
           placeholder="Type your password"
           onChange={(e) => handle(e)}
         />
